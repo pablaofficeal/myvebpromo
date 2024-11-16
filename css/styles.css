@@ -84,11 +84,11 @@ img:hover {
     gap: 20px; /* Отступы между картинками */
 }
 .album1 {
-    background-image: url('/img/7f956c8b06d5ed3f66fa99b7a27f766b.jpg'); /* Первая картинка */
+    background-image: url('img/7f956c8b06d5ed3f66fa99b7a27f766b.jpg'); /* Первая картинка */
 }
 
 .album2 {
-    background-image: url('/img/3ebd0a718ef23b02bd19681de0815096.jpg'); /* Вторая картинка */
+    background-image: url('img/3ebd0a718ef23b02bd19681de0815096.jpg'); /* Вторая картинка */
 }
 
 .album-cover-btn:focus {
