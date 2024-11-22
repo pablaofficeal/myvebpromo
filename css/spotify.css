@@ -3,8 +3,10 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: #0e0e0e;
-    color: rgb(255, 255, 255);
+    background: #000000;
+    background: rgb(18,18,18);
+    background: linear-gradient(174deg, rgba(18,18,18,1) 30%, rgba(73,66,66,1) 50%);
+    color: hwb(140 20% 24%);
     height: 100%;
 }
 
@@ -56,7 +58,6 @@ nav a:hover {
     border-radius: 8px;
     object-fit: cover;
 }
-
 .album-details {
     display: flex;
     flex-direction: column;
