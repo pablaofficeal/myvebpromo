@@ -15,39 +15,34 @@
             <li><a href="log.html">Login</a></li>
         </ul>
     </nav>
-    <!-- Кнопка для открытия модального -->
-<button onclick="document.getElementById('id01').style.display='block'">Подписаться</button>
+    
+<form action="home.html" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Форма регистрации</h1>
+    <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+    <hr>
 
-<!-- Модальный (содержит форму регистрации) -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть модальный"></span>
-  <form class="modal-content" action="home.html">
-    <div class="container">
-      <h1>Форма регистрации</h1>
-      <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
-      <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Введите вашу почту" name="email" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Введите вашу почту" name="email" required>
 
-      <label for="psw"><b>Пароль</b></label>
-      <input type="password" placeholder="Введите пароль" name="psw" required>
+    <label for="psw"><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" name="psw" required>
 
-      <label for="psw-repeat"><b>Повторить пароль</b></label>
-      <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+    <label for="psw-repeat"><b>Повторить пароль</b></label>
+    <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
 
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
-      </label>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
+    </label>
 
-      <p>Создавая учетную запись, вы соглашаетесь с нашим <a href="#" style="color:dodgerblue">Условия и конфиденциальность</a>.</p>
+    <p>Создавая учетную запись, вы соглашаетесь с нашим <a href="#" style="color:dodgerblue">Условия и конфиденциальность</a>.</p>
 
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Отменить</button>
-        <button type="submit" class="signup">Регистрация</button>
-      </div>
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Отменить</button>
+      <button type="submit" class="signupbtn">Регистрация</button>
     </div>
-  </form>
-</div>
+  </div>
+</form>
 
     <div id="musicSection" style="display: none;">
         <h2>Добро пожаловать на страницу с музыкой!</h2>
