@@ -19,7 +19,7 @@ input[type=text]:focus, input[type=password]:focus {
 button {
   background-color: #4CAF50;
   color: white;
-  padding: 30px 20px;
+  padding: 14px 20px;
   margin: 50px 0;
   border: none;
   cursor: pointer;
