@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/filter.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="music.html">Music Portfolio</a></li>
+            <li><a href="art.html">Art Portfolio</a></li>
+            <li><a href="web.html">Web Projects</a></li>
+            <li><a href="mylittletiktok.html">My TikTok</a></li>
+            <li><a href="profile.html">My Profile</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="canvas-container"></div>
+    <div class="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my projects and work!</p>
+
+
+    <div class="social-links">
+        <a href="https://www.instagram.com/pablaofficeal/profilecard/?igsh=MXZkZWNrbXViaDE3dg%3D%3D" target="_blank">Instagram</a>
+        <a href="https://t.me/pablaofficeal678" target="_blank">Telegram</a>
+        <a href="https://github.com/pablaofficeal" target="_blank">GitHub</a>
+    </div>
+    <script>
+/* Когда пользователь нажимает на кнопку,
+переключение между скрытием и отображением раскрывающегося содержимого */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+        </script>
+    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>
