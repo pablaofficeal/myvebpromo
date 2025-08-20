@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/log.css">
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/reg">Registers</a></li>
+        <li><a href="/log">Login</a></li>
+    </ul>
+    <form action="/home" method="post">
+      <div class="imgcontainer">
+
+      </div>
+    
+      <div class="container">
+        <label for="uname"><b>Пользователь</b></label>
+        <input type="text" placeholder="Введите имя" name="uname" required>
+    
+        <label for="psw"><b>Пароль</b></label>
+        <input type="password" placeholder="Введите пароль" name="psw" required>
+    
+        <button type="submit">Вход</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+        </label>
+      </div>
+    
+    </form>
+
+    <script>
+
+              // Функция для проверки имени пользователя
+              function isValidUsername(username) {
+                // Проверка на пустоту и минимум один символ
+                return username && username.trim().length > 0;
+            }
+    
+            // Проверяем, если пользователь уже зарегистрирован
+            const username = localStorage.getItem("username");
+    
+            if (username && isValidUsername(username)) {
+                // Если имя пользователя в localStorage и оно валидное, перенаправляем на страницу музыки
+                window.location.href = "home.html";
+            }
+    
+            // Логика для регистрации
+            const form = document.getElementById("login-form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const usernameInput = document.getElementById("username").value;
+    
+                if (isValidUsername(usernameInput)) {
+                    // Сохраняем имя пользователя в localStorage
+                    localStorage.setItem("username", usernameInput);
+                    // Перенаправляем на страницу музыки
+                    window.location.href = "home.html";
+                } else {
+                    // Показываем ошибку, если не введено валидное имя
+                    document.getElementById("error-message").style.display = "block";
+                }
+              });
+  
+      // Получить модальное окно
+      var modal = document.getElementById('id01');
+      
+      // Когда пользователь щелкает в любом месте за пределами модального, закройте его
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+
+</body>
+</html>
